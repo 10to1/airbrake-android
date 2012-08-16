@@ -1,11 +1,6 @@
 Airbrake Notifer for Android
 ===========================
 
-Deprecation Warning
--------------------
-I am no longer maintaining this library because I am now using 
-[Bugsnag](https://bugsnag.com) to track my Android app errors.
-
 Overview
 --------
 The Airbrake notifier for Android is designed to give you instant notification
@@ -68,3 +63,12 @@ The Airbrake notifier for Android is released under the Android-friendly
 Apache License, Version 2.0. Read the full license here:
 
 <http://www.apache.org/licenses/LICENSE-2.0>
+
+Contributions
+-------
+This libary was built by James Smith http://loopj.com/. Since it's no longer being maintianed this is the offical Airbrake fork. 
+
+Thanks to James for his contributions.
+
+<http://www.apache.org/licenses/LICENSE-2.0>
+
