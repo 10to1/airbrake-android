@@ -18,8 +18,13 @@
 
 package com.loopj.android.airbrake;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.os.AsyncTask;
+import android.util.Log;
+import android.util.Xml;
+
+import org.xmlpull.v1.XmlSerializer;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -27,20 +32,11 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.lang.Thread.UncaughtExceptionHandler;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Map;
 import java.util.Random;
-
-import org.xmlpull.v1.XmlSerializer;
-
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageInfo;
-import android.os.AsyncTask;
-import android.text.TextUtils;
-import android.util.Log;
-import android.util.Xml;
 
 /**
  * Airbrake Notifier
@@ -51,7 +47,7 @@ public class AirbrakeNotifier {
     private static final String LOG_TAG = "AirbrakeNotifier";
 
     // Basic settings
-    private static final String AIRBRAKE_ENDPOINT = "http://airbrakeapp.com/notifier_api/v2/notices";
+    private static final String AIRBRAKE_ENDPOINT = "http://errbit-10to1.herokuapp.com/notifier_api/v2/notices";
     private static final String AIRBRAKE_API_VERSION = "2.0";
 
     private static final String NOTIFIER_NAME = "Android Airbrake Notifier";
